@@ -1,0 +1,14 @@
+#设置服务端口以及访问路径
+server:
+  port: 8080
+  servlet:
+    context-path: /group-system-service
+
+
+
+
+#设置日志存放地址以及日志级别
+logging:
+  path: ./applogs/
+  pattern:
+    level: info

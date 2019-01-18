@@ -1,0 +1,64 @@
+2019-01-18 15:44:42.363 ERROR 2324 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, java.lang.String>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:250) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:226) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:210) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:166) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:307) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:290) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:238) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:200) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:173) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:74) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:364) [spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) [spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277) [spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265) [spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at com.springboot.mybaits.demo.App.main(App.java:25) [classes/:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:162) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:67) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:58) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:305) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$$Lambda$74/24119573.get(Unknown Source) ~[na:na]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:441) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:381) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:304) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:262) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:221) ~[spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 18 common frames omitted
+
+2019-01-18 15:45:19.689 info 15040 --- [main] com.springboot.mybaits.demo.App          : Starting App on wy-PC with PID 15040 (C:\Users\wy\work\systemdemo\target\classes started by wy in C:\Users\wy\work\systemdemo)
+2019-01-18 15:45:19.696 info 15040 --- [main] com.springboot.mybaits.demo.App          : No active profile set, falling back to default profiles: default
+2019-01-18 15:45:19.757 info 15040 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e82df6a: startup date [Fri Jan 18 15:45:19 CST 2019]; root of context hierarchy
+2019-01-18 15:45:21.981 info 15040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-18 15:45:22.016 info 15040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-18 15:45:22.016 info 15040 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-01-18 15:45:22.030 info 15040 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files (x86)\Java\jdk1.8.0_31\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Lenovo\Fingerprint Manager Pro\;C:\Program Files (x86)\Common Files\Lenovo;C:\ProgramData\Lenovo\ReadyApps;C:\myworks\apache-maven-3.5.2\bin;C:\myworks\tomcat\apache-tomcat-8.0.39\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Java\jdk1.8.0_31\bin;C:\myworks\something\Sonarqube\sonarqube-6.2\sonar-scanner-2.8\bin;C:\myworks\something\FFFMEPG\ffmpeg-20170418-6108805-win64-static\ffmpeg-20170418-6108805-win64-static\bin;C:\Users\wy\AppData\Local\Programs\Python\Python36-32;C:\Program Files (x86)\nodejs;C:\myworks\something\FFFMEPG\ffmpeg-3.3.1-win64-static\bin;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\myworks\gradle-4.3.1\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\node_global;C:\Users\wy\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\wy\AppData\Local\Programs\Python\Python35\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\wy\AppData\Roaming\npm;.]
+2019-01-18 15:45:22.175 info 15040 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/group-system-service]    : Initializing Spring embedded WebApplicationContext
+2019-01-18 15:45:22.176 info 15040 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2420 ms
+2019-01-18 15:45:22.262 info 15040 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-18 15:45:22.268 info 15040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-18 15:45:22.268 info 15040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-18 15:45:22.269 info 15040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-18 15:45:22.269 info 15040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-18 15:45:22.479 info 15040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-18 15:45:22.712 info 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e82df6a: startup date [Fri Jan 18 15:45:19 CST 2019]; root of context hierarchy
+2019-01-18 15:45:22.806 info 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.springboot.mybaits.demo.App.home()
+2019-01-18 15:45:22.810 info 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-18 15:45:22.810 info 15040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-18 15:45:22.837 info 15040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-18 15:45:22.837 info 15040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-18 15:45:23.013 info 15040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-18 15:45:23.086 info 15040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/group-system-service'
+2019-01-18 15:45:23.092 info 15040 --- [main] com.springboot.mybaits.demo.App          : Started App in 5.013 seconds (JVM running for 5.569)

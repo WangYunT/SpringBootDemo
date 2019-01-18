@@ -129,7 +129,7 @@
           </dependencies>
           <executions>
             <execution>
-              <id>Generate MyBatis Artifacts</id>
+              <id>mybatis genetator</id>
               <phase>package</phase>
               <goals>
                 <goal>
@@ -145,7 +145,7 @@
             <overwrite>true</overwrite>
             <!--  mybatis 的Generate file 路径 -->
             <configurationFile>
-              src/resources/mybatis-generator.xml
+              src/main/resources/mybatis-generator.xml
             </configurationFile>
           </configuration>
         </plugin>

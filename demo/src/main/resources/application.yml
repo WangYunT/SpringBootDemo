@@ -1,0 +1,18 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size:
+        100MB
+      max-request-size:
+        100MB
+#注意，这个地方100MB中的MB不要写小写。不然会报错的
+
+#日志存放地址及日志级别
+logging:
+  file: applog/logs/demo.txt
+  level:
+    root: INFO
+    
+#上传文件存放地址
+FILEPATHConfig: 
+  UPLOAD_FLODER: C://upload
